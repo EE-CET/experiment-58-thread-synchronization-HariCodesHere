@@ -30,5 +30,6 @@ public class SynchronizationDemo {
         t1.join();   // ensure first thread finishes
         t2.start();
         t2.join();   // ensure second thread finishes
+        System.out.println();
     }
 }
