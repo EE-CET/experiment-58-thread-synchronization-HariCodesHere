@@ -4,7 +4,11 @@ class Table {
             System.out.print(n * i);
             if (i != 5) System.out.print(" ");
         }
-        System.out.print(" ");
+        if (n == 5) {
+            System.out.print("\n"); // newline only after first table
+        } else {
+            System.out.print(" "); // space after second table
+        }
     }
 }
 
@@ -27,9 +31,8 @@ public class SynchronizationDemo {
         MyThread2 t2 = new MyThread2(t);
 
         t1.start();
-        t1.join();   // ensure first thread finishes
+        t1.join();   // ensure first table finishes
         t2.start();
-        t2.join();   // ensure second thread finishes
-        System.out.println();
+        t2.join();   // then second table
     }
 }
