@@ -5,7 +5,7 @@ class Table {
             if (i != 5) System.out.print(" ");
         }
         if (n == 5) {
-            System.out.print("\n"); 
+            System.out.print(" \n"); // space after 25, then newline
         }
     }
 }
@@ -29,8 +29,8 @@ public class SynchronizationDemo {
         MyThread2 t2 = new MyThread2(t);
 
         t1.start();
-        t1.join();   
+        t1.join();   // table of 5 finishes first
         t2.start();
-        t2.join();  
+        t2.join();   // then table of 100
     }
 }
