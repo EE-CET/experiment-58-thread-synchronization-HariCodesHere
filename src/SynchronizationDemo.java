@@ -1,9 +1,10 @@
 class Table {
     synchronized void printTable(int n) {
         for (int i = 1; i <= 5; i++) {
-            System.out.print(n * i + " ");
+            System.out.print(n * i);
+            if (i != 5) System.out.print(" ");
         }
-        System.out.print("\n");
+        System.out.print(" ");
     }
 }
 
@@ -32,7 +33,7 @@ public class SynchronizationDemo {
         Table t = new Table();
         MyThread1 t1 = new MyThread1(t);
         MyThread2 t2 = new MyThread2(t);
-
+        
         t1.start();
         t1.join();
         t2.start();
