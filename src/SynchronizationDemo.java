@@ -31,9 +31,10 @@ public class SynchronizationDemo {
         MyThread2 t2 = new MyThread2(t);
 
         t1.start();
-        t1.join();   // ensure first table finishes
+        t1.join(); 
+        System.out.print(" ");// ensure first table finishes
         t2.start();
         t2.join();   // then second table
-        System.out.println();
+        
     }
 }
