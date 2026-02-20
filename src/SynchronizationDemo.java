@@ -7,7 +7,9 @@ class Table {
             } catch (InterruptedException e) {
             }
         }
-        System.out.println();
+        if (n == 5) {
+            System.out.print("\n");
+        }
     }
 }
 
