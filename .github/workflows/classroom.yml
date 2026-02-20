@@ -15,3 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: education/autograding@v1
+        with:
+          # Path to the folder where autograding.json is located
+          assignment-path: ./src
