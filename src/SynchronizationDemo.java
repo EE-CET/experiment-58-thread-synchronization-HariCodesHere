@@ -37,6 +37,10 @@ public class SynchronizationDemo {
         MyThread1 t1 = new MyThread1(t);
         MyThread2 t2 = new MyThread2(t);
         t1.start();
+        try {
+            t1.join();
+        } catch (InterruptedException e) {
+        }
         t2.start();
     }
 }
