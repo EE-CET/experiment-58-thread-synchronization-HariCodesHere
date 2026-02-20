@@ -34,5 +34,6 @@ public class SynchronizationDemo {
         t1.join();   // ensure first table finishes
         t2.start();
         t2.join();   // then second table
+        System.out.println();
     }
 }
