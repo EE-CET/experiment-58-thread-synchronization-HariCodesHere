@@ -11,7 +11,14 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
-    timeout-minutes: 2
     steps:
       - uses: actions/checkout@v4
+
+      # Copy autograding.json from .github/classroom to root
+      - name: Copy autograding.json
+        run: cp .github/classroom/autograding.json .
+
+      # Run the autograder
       - uses: education/autograding@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
